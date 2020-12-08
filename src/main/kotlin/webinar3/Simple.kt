@@ -15,14 +15,10 @@ class Simple : StrategyInfrastructure(BitMEXData()) {
 
     override fun update(source: Source, marketData: Map<String, Any>) {
         if(!traded) {
-            val inReal = DoubleArray(50)
             val executor = ExecutorFactory.createExecutor(Venue.BITMEX)
-            val core = Core()
             println(executor.market("XBTUSD", "Buy", 1))
             traded = true
         }
-        println("Venue: ${source.venue}, Symbol: ${source.symbol}, Signal: ${source.signal}")
-        println("Market data:")
         println(marketData)
     }
 
