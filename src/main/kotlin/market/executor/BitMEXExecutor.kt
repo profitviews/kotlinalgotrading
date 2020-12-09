@@ -20,9 +20,9 @@ class BitMEXExecutor : Executor {
         return post_order(json_order) }
 
     private val domain = "http://www.bitmex.com"
+    private val method = "POST"
+    private val path = "/api/v1/order" // See https://www.bitmex.com/api/explorer/#!/Order/Order_new
     private fun post_order(json_order: JSONObject): MutableMap<String, Any> {
-        val method = "POST"
-        val path = "/api/v1/order" // See https://www.bitmex.com/api/explorer/#!/Order/Order_new
         val expiry = (Instant.now().epochSecond + 5).toString()
         val body = method + path + expiry + json_order.toString()
         val headers = mapOf("api-expires" to expiry, "api-key" to api_key,
