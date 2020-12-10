@@ -5,9 +5,10 @@ Basis for writing algo trading systems in Kotlin
 
 How to install everything required to run the code in this repo
 
+On all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's probably best to have [Jetbrains IDEA](https://www.jetbrains.com/idea/) too.
+
 ### Windows
 
-On Windows, like all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's probably best to have Jetbrains IDEA too.
 There are various security settings that are typically defaulted to in a Windows installation.  You may need to turn some of these off, for example any restriction on downloading files.  It is possible to do this on a domain-by-domain basis, and this is encouraged.
 If you wish to generally allow file downloads, you can do it (on Windows Server 2019) by:
 1. Click the lower left corner "Window" symbol "Start" menu.
@@ -48,9 +49,54 @@ Go to https://kotlinlang.org/docs/tutorials/command-line.html and under Download
 
 In https://gradle.org/install/ go to [Installing manually](https://gradle.org/install/#manually) and follow the instructions for "Microsoft Windows users"
 
-#### Initializing Gradle Build
+### Linux and MacOS
 
-In Git Bash, `cd` to the directory where you cloned `kotlinalgotrading` and run `./gradlew tasks`.  This will download Gradle (if necessary) and the required libraries.
+Since both operating systems are derived from Unix, the installations are similar.
+
+#### Git
+
+Open a terminal window.  Use your package manager to install `git`.  On MacOS this will be `brew install git` and on Debian derivatives including Ubuntu, `apt install git`.  See [Git's Linux page](https://git-scm.com/download/linux) for [PPAs](https://itsfoss.com/ppa-guide/) for the latest versions.
+
+#### GitHub
+
+Go to https://github.com and create an account.  In a terminal do:
+```shell
+cd ~/.ssh
+ssh-keygen -t RSA # Press enter for all the defaults
+```
+This will generate an SSH key pair `id_rsa` and `id_rsa.pub` in `.ssh`
+Open `id_rsa.pub` and copy its complete text.
+While logged in to your GitHub account, go to https://github.com/settings/keys and in the **SSH keys** section click the "New SSH key" button.  Give it a title and then paste the contents of `id_rsa.pub` into the "Key" field and click "Add SSH key".
+
+Choose a directory in which you wish to place this `kotlinalgotrading` directory, `cd` to it and do:
+`git clone git@github.com:profitviews/kotlinalgotrading.git`
+This should copy this repo into your chosen directory.
+
+#### Java
+
+Find a Java vendor and download and install a recent JDK version.  It must be version 8 or later (or whatever version required by [Gradle](#Gradle)).
+[OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVariant=hotspot) will work fine.  Download and install and set do 
+```shell
+export JDK_HOME=/the/directory/you/installed/it
+```
+Note that the directory you supply in this line should be the one immediately **above** the `bin` directory.
+
+#### Kotlin
+
+Go to https://kotlinlang.org/docs/tutorials/command-line.html and under Downloading the compiler click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
+
+#### Gradle
+
+First make sure you have `curl` installed from your package manager e.g. `sudo apt install` (Debian/Ubuntu) or `brew install curl` (MacOS). Then:
+```shell
+curl -s "https://get.sdkman.io" | bash
+```
+and follow the instructions to install [`sdk`](http://sdkman.io/) which is `gradle`'s package manager.
+Finally `sdk install gradle` to install Gradle.  On MacOS you can do `brew install gradle` if you prefer.
+
+## Initializing Gradle Build
+
+In Terminal (or Git Bash on Windows), `cd` to the directory where you cloned `kotlinalgotrading` and run `./gradlew tasks`.  This will download Gradle (if necessary) and the required libraries.
 
 Then `./gradlew build` will build the system.
 
@@ -59,4 +105,8 @@ If you check [build.gradle.kts](https://github.com/profitviews/kotlinalgotrading
 export $bitmex_api_key=YourApiKey
 export $bitmex_secret=YourSecretString
 ```
-Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent for you!
+Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent for you!  You can change it to run the other examples.
+
+## Jetbrains IntelliJ IDEA
+
+[Jetbrains](http://jetbrains.com/) created Kotlin and continue to manage its development.  Therefore you can count on their IDE being well adapted to the language.  We recommend you use [IntelliJ IDEA](https://www.jetbrains.com/idea/).  The installation is straightforward on all the platforms.
