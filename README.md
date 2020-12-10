@@ -1,5 +1,5 @@
 # kotlinalgotrading
-Basis for writing algo trading systems in Kotlin
+All the code required for writing an algo trading systems in Kotlin
 
 ## Installation
 
@@ -7,7 +7,7 @@ How to install everything required to run the code in this repo
 
 ### BitMEX
 
-You need an account with [BitMEX](https://www.bitmex.com/).  This is not available for residents of the United States or Hong Kong - sorry!
+You need an account with [BitMEX](https://www.bitmex.com/).  This is not available for residents of the United States or Hong Kong yet, unfortunately.
 
 Signing up to BitMEX requires authentication.  You will need to enable your microphone and webcam (temporarily) as part of this process - they ask you to repeat some numbers and to obey some simple instructions.  You will need to send a photograph of a government issued id - driver's license or passport e.g.
 This may take a few hours - or perhaps a day if there is some complication.
