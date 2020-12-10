@@ -5,6 +5,23 @@ Basis for writing algo trading systems in Kotlin
 
 How to install everything required to run the code in this repo
 
+### BitMEX
+
+You need an account with [BitMEX](https://www.bitmex.com/).  This is not available for residents of the United States or Hong Kong - sorry!
+
+Signing up to BitMEX requires authentication.  You will need to enable your microphone and webcam (temporarily) as part of this process - they ask you to repeat some numbers and to obey some simple instructions.  You will need to send a photograph of a government issued id - driver's license or passport e.g.
+This may take a few hours - or perhaps a day if there is some complication.
+
+You need some Bitcoin to transfer to your BitMEX wallet.  I buy from [CoinBase](https://www.coinbase.com/), however you may have a preferred vendor.  Once you have bought Bitcoin you transfer it to the BitMEX wallet - click the [Deposit](https://www.bitmex.com/app/wallet) button and copy the wallet id to provide when you send from the vendor.
+
+You need to generate **2** [API key pairs](https://www.bitmex.com/app/apiKeys), one with Key Permissions blank (-) which means **Read Only**, for ProfitView and one with Key Permissions "Order" for your algo so that it can trade.  Copy both these to a safe place (you won't be able to see the API Secret again unless you make a copy).  Make sure you distinguish which is which.
+
+### ProfitView
+
+You need a [ProfitView](https://profitview.net/) account (the free tier is adequate) - [Sign-up](https://profitview.net/register) and go to your email to confirm.  It will prompt you to enter your BitMEX API key/secret pair.  Make sure you enter the **Read Only** key here.
+
+Go to the ProfitView "Settings" tab.  This is where you find your generated ProfitView API Key.  You will need this to retrieve real-time market data.
+
 On all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's probably best to have [Jetbrains IDEA](https://www.jetbrains.com/idea/) too.
 
 ### Windows
@@ -102,10 +119,17 @@ Then `./gradlew build` will build the system.
 
 If you check [build.gradle.kts](https://github.com/profitviews/kotlinalgotrading/blob/main/build.gradle.kts) you will see it is configured to run the first example from the webinar - though you must first set your BitMEX API key and secret with
 ```shell
-export $bitmex_api_key=YourApiKey
-export $bitmex_secret=YourSecretString
+export bitmex_api_key=YourApiKey
+export bitmex_secret=YourSecretString
 ```
+If you're using Jetbrains IDEA, you can set these environment variable in a Run Configuration: Run menu -> Edit configuations... -> Environment variables.  Click the icon on the right of the text box to enter multiple variables.
+
 Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent for you!  You can change it to run the other examples.
+
+To run `webinar2`, `webinar3` and `webinar4` - or any algo - you will need your ProfitView API Key from above with:
+```shell
+export profitview_api_key=YourProfitViewAPIKey
+```
 
 ## Jetbrains IntelliJ IDEA
 
