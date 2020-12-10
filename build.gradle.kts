@@ -1,6 +1,7 @@
 plugins {
     java
     kotlin("jvm") version "1.4.20"
+    application
 }
 
 group = "net.profitview"
@@ -30,4 +31,8 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+}
+
+application {
+    mainClass.set("webinar1.Execute_exampleKt")
 }
