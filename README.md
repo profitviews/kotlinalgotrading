@@ -50,4 +50,13 @@ In https://gradle.org/install/ go to [Installing manually](https://gradle.org/in
 
 #### Initializing Gradle Build
 
-In Git Bash, `cd` to the directory where you cloned `kotlinalgotrading` and run `./gradlew tasks`.  This will download Gradle (if necessary) and the required 
+In Git Bash, `cd` to the directory where you cloned `kotlinalgotrading` and run `./gradlew tasks`.  This will download Gradle (if necessary) and the required libraries.
+
+Then `./gradlew build` will build the system.
+
+If you check [build.gradle.kts](https://github.com/profitviews/kotlinalgotrading/blob/main/build.gradle.kts) you will see it is configured to run the first example from the webinar - though you must first set your BitMEX API key and secret with
+```shell
+export $bitmex_api_key=YourApiKey
+export $bitmex_secret=YourSecretString
+```
+Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent for you!
