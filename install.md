@@ -1,4 +1,4 @@
-How to install everything required to run the code in this repo.  Note that if you have **any issues** please join the [ProfitViewers Slack](https://join.slack.com/t/profitviewers/shared_invite/zt-k5kxhxb4-vyz~hTlFlrgAtPiQbq~Pcg) and ask in the #kotlin channel.
+How to install everything required to run the code in this repo.  Note that if you have **any issues** please join the [ProfitViewers Slack](https://join.slack.com/t/profitviewers/shared_invite/zt-k5kxhxb4-vyz~hTlFlrgAtPiQbq~Pcg) and ask in the **#kotlin** channel.
 
 ## BitMEX
 
