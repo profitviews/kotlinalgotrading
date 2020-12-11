@@ -34,5 +34,5 @@ tasks {
 }
 
 application {
-    mainClass.set("webinar1.Execute_exampleKt")
+    mainClass.set("webinar1.ExecuteExampleKt")
 }
