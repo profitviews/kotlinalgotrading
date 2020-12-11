@@ -14,9 +14,9 @@ class Simple : StrategyInfrastructure(BitMEXData()) {
     }
 
     override fun update(source: Source, marketData: Map<String, Any>) {
-        if(!traded) {
+        if(!traded) { // Just waits for the first trade and buys one of it
             val executor = ExecutorFactory.createExecutor(Venue.BITMEX)
-            println(executor.market("XBTUSD", "Buy", 1))
+            println(executor.market(marketData["sym"] as String, "Buy", 1))
             traded = true
         }
         println(marketData)
