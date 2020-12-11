@@ -109,21 +109,25 @@ export bitmex_secret=YourSecretString
 ```
 If you're using Jetbrains IDEA, you can set these environment variable in a Run Configuration: Run menu -> Edit configuations... -> Environment variables.  Click the icon on the right of the text box to enter multiple variables.
 
-Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent for you!  You can change it to run the other examples: edit [build.gradle.kts](https://github.com/profitviews/kotlinalgotrading/blob/main/build.gradle.kts) in your cloned `kotlinalgotrading` directory, and change 
+Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent for you!  
+
+To run the other examples, edit [build.gradle.kts](https://github.com/profitviews/kotlinalgotrading/blob/main/build.gradle.kts) in your cloned `kotlinalgotrading` directory, and change 
 ```kotlin
 application {
-    mainClass.set("webinar1.Execute_exampleKt")
+    mainClass.set("webinar1.ExecuteExampleKt")
 }
 ```
 to
 ```kotlin
 application {
-    mainClass.set("webinar2.Market_data_exampleKt")
+    mainClass.set("webinar2.MarketDataExampleKt")
 }
 ```
-or similar with `webinar3.SimpleKt` or `webinar4.MeanReversionKt`
+or similar with `webinar3.SimpleKt` or `webinar4.MeanReversionKt`.
 
-To run `webinar2.Market_data_exampleKt`, `webinar3.SimpleKt` and `webinar4.MeanReversionKt` - or any algo - you will need your ProfitView API Key from above with:
+Then execute `./gradlew run` again.
+
+**NOTE**: to run `webinar2.MarketDataExampleKt`, `webinar3.SimpleKt` and `webinar4.MeanReversionKt` - or any algo - you will need your ProfitView API Key from above and write it to the `profitview_api` environment variable with:
 ```shell
 export profitview_api_key=YourProfitViewAPIKey
 ```
