@@ -48,15 +48,6 @@ In the options generally choose the defaults.  Make sure you choose to enable **
 #### GitHub
 
 Go to https://github.com and create an account.  Run Git Bash (go to the Windows "start" menu and find it or search for it there).
-The `git` installation will have created a directory `.ssh` in your home directory (typically `C:\Users\Username`)
-In Git Bash, do:
-```shell
-cd ~/.ssh
-ssh-keygen -t rsa
-```
-Choose all the defaults.  This will generate `id_rsa` and `id_rsa.pub` in `.ssh`
-Open `id_rsa.pub` and copy its complete text
-While logged in to your GitHub account, go to https://github.com/settings/keys and in the **SSH keys** section click the "New SSH key" button.  Give it a title and then paste the contents of `id_rsa.pub` into the "Key" field and click "Add SSH key".
 
 Now in Git Bash choose a directory in which you wish to place this `kotlinalgotrading` directory, `cd` to it and do:
 `git clone git@github.com:profitviews/kotlinalgotrading.git`
@@ -84,15 +75,6 @@ Since both operating systems are derived from Unix, the installations are simila
 Open a terminal window.  Use your package manager to install `git`.  On MacOS this will be `brew install git` and on Debian derivatives including Ubuntu, `sudo apt install git`.  See [Git's Linux page](https://git-scm.com/download/linux) for [PPAs](https://itsfoss.com/ppa-guide/) for the latest versions.
 
 #### GitHub
-
-Go to https://github.com and create an account.  In a terminal do:
-```shell
-cd ~/.ssh
-ssh-keygen -t RSA
-```
-This will generate an SSH key pair `id_rsa` and `id_rsa.pub` in `.ssh`
-Open `id_rsa.pub` and copy its complete text.
-While logged in to your GitHub account, go to https://github.com/settings/keys and in the **SSH keys** section click the "New SSH key" button.  Give it a title and then paste the contents of `id_rsa.pub` into the "Key" field and click "Add SSH key".
 
 Choose a directory in which you wish to place this `kotlinalgotrading` directory, `cd` to it and do:
 `git clone git@github.com:profitviews/kotlinalgotrading.git`
