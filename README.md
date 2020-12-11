@@ -4,7 +4,7 @@ All the code required for writing an algo trading systems in Kotlin
 
 ## Installation
 
-How to install everything required to run the code in this repo
+How to install everything required to run the code in this repo.
 
 ### BitMEX
 
@@ -17,6 +17,8 @@ You need some Bitcoin to transfer to your BitMEX wallet.  I buy from [CoinBase](
 
 You need to generate **2** [API key pairs](https://www.bitmex.com/app/apiKeys), one with Key Permissions blank (-) which means **Read Only**, for ProfitView and one with Key Permissions "Order" for your algo so that it can trade.  Copy both these to a safe place (you won't be able to see the API Secret again unless you make a copy).  Make sure you distinguish which is which.
 
+See [Crypto Trading From Scratch](https://profitview.net/blog/crypto-trading-from-scratch) for some more information and detail.
+
 ### ProfitView
 
 You need a [ProfitView](https://profitview.net/) account (the free tier is adequate) - [Sign-up](https://profitview.net/register) and go to your email to confirm.  It will prompt you to enter your BitMEX API key/secret pair.  Make sure you enter the **Read Only** key here.
@@ -24,6 +26,8 @@ You need a [ProfitView](https://profitview.net/) account (the free tier is adequ
 Go to the ProfitView "Settings" tab.  This is where you find your generated ProfitView API Key.  You will need this to retrieve real-time market data.
 
 On all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's probably best to have [Jetbrains IDEA](https://www.jetbrains.com/idea/) too.
+
+See [ProfitView for Dummies](https://profitview.net/blog/profitview-for-dummies) for more detail.
 
 ### Windows
 
