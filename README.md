@@ -77,7 +77,7 @@ Since both operating systems are derived from Unix, the installations are simila
 
 #### Git
 
-Open a terminal window.  Use your package manager to install `git`.  On MacOS this will be `brew install git` and on Debian derivatives including Ubuntu, `apt install git`.  See [Git's Linux page](https://git-scm.com/download/linux) for [PPAs](https://itsfoss.com/ppa-guide/) for the latest versions.
+Open a terminal window.  Use your package manager to install `git`.  On MacOS this will be `brew install git` and on Debian derivatives including Ubuntu, `sudo apt install git`.  See [Git's Linux page](https://git-scm.com/download/linux) for [PPAs](https://itsfoss.com/ppa-guide/) for the latest versions.
 
 #### GitHub
 
