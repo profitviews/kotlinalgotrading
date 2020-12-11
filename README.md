@@ -1,4 +1,5 @@
-# kotlinalgotrading
+# Algo Trading in Kotlin
+
 All the code required for writing an algo trading systems in Kotlin
 
 ## Installation
