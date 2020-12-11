@@ -96,6 +96,8 @@ curl -s "https://get.sdkman.io" | bash
 and follow the instructions to install [`sdk`](http://sdkman.io/) which is `gradle`'s package manager.
 Finally `sdk install gradle` to install Gradle.  On MacOS you can do `brew install gradle` if you prefer.
 
+
+
 # Initializing Gradle Build
 
 In Terminal (or Git Bash on Windows), `cd` to the directory where you cloned `kotlinalgotrading` and run `./gradlew tasks`.  This will download Gradle (if necessary) and the required libraries.
