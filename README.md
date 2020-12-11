@@ -45,8 +45,13 @@ In the options generally choose the defaults.  Make sure you choose to enable **
 
 Go to https://github.com and create an account.  Run Git Bash (go to the Windows "start" menu and find it or search for it there).
 The `git` installation will have created a directory `.ssh` in your home directory (typically `C:\Users\Username`)
-In Git Bash, do `cd` (to go to your home directory) and `cd .ssh`.  Then run `ssh-keygen -r rsa` and choose all the defaults.
-This will generate `id_rsa` and `id_rsa.pub` in that directory
+In Git Bash, do:
+```shell
+cd
+cd .ssh
+ssh-keygen -r rsa
+```
+Choose all the defaults.  This will generate `id_rsa` and `id_rsa.pub` in `.ssh`
 Open `id_rsa.pub` and copy its complete text
 While logged in to your GitHub account, go to https://github.com/settings/keys and in the **SSH keys** section click the "New SSH key" button.  Give it a title and then paste the contents of `id_rsa.pub` into the "Key" field and click "Add SSH key".
 
