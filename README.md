@@ -47,9 +47,8 @@ Go to https://github.com and create an account.  Run Git Bash (go to the Windows
 The `git` installation will have created a directory `.ssh` in your home directory (typically `C:\Users\Username`)
 In Git Bash, do:
 ```shell
-cd
-cd .ssh
-ssh-keygen -r rsa
+cd ~/.ssh
+ssh-keygen -t rsa
 ```
 Choose all the defaults.  This will generate `id_rsa` and `id_rsa.pub` in `.ssh`
 Open `id_rsa.pub` and copy its complete text
@@ -85,7 +84,7 @@ Open a terminal window.  Use your package manager to install `git`.  On MacOS th
 Go to https://github.com and create an account.  In a terminal do:
 ```shell
 cd ~/.ssh
-ssh-keygen -t RSA # Press enter for all the defaults
+ssh-keygen -t RSA
 ```
 This will generate an SSH key pair `id_rsa` and `id_rsa.pub` in `.ssh`
 Open `id_rsa.pub` and copy its complete text.
