@@ -1,4 +1,4 @@
-How to install everything required to run the code in this repo.
+How to install everything required to run the code in this repo.  Note that if you have **any issues** please join the [ProfitViewers Slack](https://join.slack.com/t/profitviewers/shared_invite/zt-k5kxhxb4-vyz~hTlFlrgAtPiQbq~Pcg) and ask in the #kotlin channel.
 
 ## BitMEX
 
@@ -109,12 +109,25 @@ export bitmex_secret=YourSecretString
 ```
 If you're using Jetbrains IDEA, you can set these environment variable in a Run Configuration: Run menu -> Edit configuations... -> Environment variables.  Click the icon on the right of the text box to enter multiple variables.
 
-Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent for you!  You can change it to run the other examples.
+Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent for you!  You can change it to run the other examples: edit [build.gradle.kts](https://github.com/profitviews/kotlinalgotrading/blob/main/build.gradle.kts) in your cloned `kotlinalgotrading` directory, and change 
+```kotlin
+application {
+    mainClass.set("webinar1.Execute_exampleKt")
+}
+```
+to
+```kotlin
+application {
+    mainClass.set("webinar2.Market_data_exampleKt")
+}
+```
+or similar with `webinar3.SimpleKt` or `webinar4.MeanReversionKt`
 
-To run `webinar2`, `webinar3` and `webinar4` - or any algo - you will need your ProfitView API Key from above with:
+To run `webinar2.Market_data_exampleKt`, `webinar3.SimpleKt` and `webinar4.MeanReversionKt` - or any algo - you will need your ProfitView API Key from above with:
 ```shell
 export profitview_api_key=YourProfitViewAPIKey
 ```
+or put it in your IDEA Run Configuration.
 
 # Jetbrains IntelliJ IDEA
 
