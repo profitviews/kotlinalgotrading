@@ -39,22 +39,19 @@ If you wish to generally allow file downloads, you can do it (on Windows Server 
 Go to https://git-scm.com/download/win and click the appropriate download button.  Click to run the downloaded install file.
 In the options generally choose the defaults.  Make sure you choose to enable **Git Bash**
 
-### GitHub
+### Clone this Repo
 
-Go to https://github.com and create an account.  Run Git Bash (go to the Windows "start" menu and find it or search for it there).
-
-Now in Git Bash choose a directory in which you wish to place this `kotlinalgotrading` directory, `cd` to it and do:
-`git clone git@github.com:profitviews/kotlinalgotrading.git`
-This should copy this repo into your chosen directory.
+In Git Bash create a directory in which you wish to place this `kotlinalgotrading` repo, `cd` to it and do:
+```git clone git@github.com:profitviews/kotlinalgotrading.git```
+This will clone this repo into your chosen directory.
 
 ### Java
 
-Find a Java vendor and download and install a recent JDK version.  It must be version 8 or later (or whatever version required by [Gradle](#Gradle)).
-[OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVariant=hotspot) will work fine.  If you choose the [.msi](https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.1%2B9/OpenJDK15U-jdk_x64_windows_hotspot_15.0.1_9.msi), after download you need only to click it to install.  During installation choose to have it set `JDK_HOME` and the Registry variables.
+Go to [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVariant=hotspot) and install JDK version 8 or greater. If you choose the [.msi](https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.1%2B9/OpenJDK15U-jdk_x64_windows_hotspot_15.0.1_9.msi), after download you need only to click it to install.  During installation choose to have it set `JDK_HOME` and the Registry variables.
 
 ### Kotlin
 
-Go to https://kotlinlang.org/docs/tutorials/command-line.html and under Downloading the compiler click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
+Go to [this](https://kotlinlang.org/docs/tutorials/command-line.html) webpage and under Downloading the compiler click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
 
 ### Gradle
 
@@ -66,35 +63,33 @@ Since both operating systems are derived from Unix, the installations are simila
 
 ### Git
 
-Open a terminal window.  Use your package manager to install `git`.  On MacOS this will be `brew install git` and on Debian derivatives including Ubuntu, `sudo apt install git`.  See [Git's Linux page](https://git-scm.com/download/linux) for [PPAs](https://itsfoss.com/ppa-guide/) for the latest versions.
+Open a terminal window. On MacOS run be `brew install git` and on Debian derivatives including Ubuntu run `sudo apt install git`. 
 
-### GitHub
+### Clone this Repo
 
-Choose a directory in which you wish to place this `kotlinalgotrading` directory, `cd` to it and do:
-`git clone git@github.com:profitviews/kotlinalgotrading.git`
-This should copy this repo into your chosen directory.
+Create a directory in which you wish to place this `kotlinalgotrading` repo, `cd` to it and do:
+```git clone git@github.com:profitviews/kotlinalgotrading.git```
+This will clone this repo into your chosen directory.
 
 ### Java
 
-Find a Java vendor and download and install a recent JDK version.  It must be version 8 or later (or whatever version required by [Gradle](#Gradle)).
-[OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVariant=hotspot) will work fine.  Download and install and set do 
+Go to [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVariant=hotspot) and install JDK version 8 or greater. For Mac OS you should be able to confirm the version you installed by running `java --version`. On Linux after installing you may need to update your `.bash_rc` or equivalent to include the line
 ```shell
-export JDK_HOME=/the/directory/you/installed/it
+export JDK_HOME=<path to your install directory>/bin/java
 ```
-Note that the directory you supply in this line should be the one immediately **above** the `bin` directory.
 
 ### Kotlin
 
-Go to https://kotlinlang.org/docs/tutorials/command-line.html and under Downloading the compiler click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
+On Mac OS you can simply run `brew install kotlin`. For Linux go to [this](https://kotlinlang.org/docs/tutorials/command-line.html) webpage.  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
 
 ### Gradle
 
-First make sure you have `curl` installed from your package manager e.g. `sudo apt install` (Debian/Ubuntu) or `brew install curl` (MacOS). Then:
+For Mac OS install by running `brew install gradle`. On Linux run:
 ```shell
 curl -s "https://get.sdkman.io" | bash
 ```
-and follow the instructions to install [`sdk`](http://sdkman.io/) which is `gradle`'s package manager.
-Finally `sdk install gradle` to install Gradle.  On MacOS you can do `brew install gradle` if you prefer.
+and follow the instructions to install [`sdk`](http://sdkman.io/) which is `gradle`'s package manager. Finally `sdk install gradle` to install Gradle.  
+
 
 # Initializing Gradle Build
 
