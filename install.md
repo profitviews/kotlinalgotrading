@@ -63,7 +63,7 @@ Since both operating systems are derived from Unix, the installations are simila
 
 ### Git
 
-Open a terminal window. On MacOS run be `brew install git` and on Debian derivatives including Ubuntu run `sudo apt install git`. 
+Open a terminal window. On MacOS run `brew install git` and on Debian derivatives including Ubuntu run `sudo apt install git`. 
 
 ### Clone this Repo
 
