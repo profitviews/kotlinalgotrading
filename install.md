@@ -73,7 +73,7 @@ This will clone this repo into your chosen directory.
 
 ### Java
 
-Go to [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVariant=hotspot) and install JDK version 8 or greater. For Mac OS you should be able to confirm the version you installed by running `java --version`. On Linux after installing you may need to update your `.bash_rc` or equivalent to include the line
+Go to [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVariant=hotspot) and install JDK version 8 or greater. For Mac OS you should be able to confirm the version you installed by running `java --version`. On Linux after installing you may need to update your `.bashrc` or equivalent to include the line
 ```shell
 export JDK_HOME=<path to your install directory>/bin/java
 ```
@@ -89,7 +89,6 @@ For Mac OS install by running `brew install gradle`. On Linux run:
 curl -s "https://get.sdkman.io" | bash
 ```
 and follow the instructions to install [`sdk`](http://sdkman.io/) which is `gradle`'s package manager. Finally `sdk install gradle` to install Gradle.  
-
 
 # Initializing Gradle Build
 
