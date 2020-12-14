@@ -19,9 +19,9 @@ You need a [ProfitView](https://profitview.net/) account (the free tier is adequ
 
 Go to the ProfitView "Settings" tab.  This is where you find your generated ProfitView API Key.  You will need this to retrieve real-time market data.
 
-On all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's probably best to have [Jetbrains IDEA](https://www.jetbrains.com/idea/) too.
-
 See [ProfitView for Dummies](https://profitview.net/blog/profitview-for-dummies) for more detail.
+
+On all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's probably best to have [Jetbrains IDEA](https://www.jetbrains.com/idea/) too.
 
 ## Install Steps
 
