@@ -21,9 +21,9 @@ Go to the ProfitView "Settings" tab.  This is where you find your generated Prof
 
 See [ProfitView for Dummies](https://profitview.net/blog/profitview-for-dummies) for more detail.
 
-On all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's probably best to have [Jetbrains IDEA](https://www.jetbrains.com/idea/) too.
-
 ## Install Steps
+
+On all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's probably best to have [Jetbrains IDEA](https://www.jetbrains.com/idea/) too.
 
 <table>
 <tr>
