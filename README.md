@@ -4,7 +4,7 @@ All the code required for writing an algo trading systems in Kotlin
 
 ## Installation and Build
 
-See [Install](https://github.com/profitviews/kotlinalgotrading/blob/main/install.md).
+See [Install](install.md).
 
 ## Discussion and Help
 
@@ -35,9 +35,9 @@ fun market_order(symbol: String, side: String, orderQty: Int): MutableMap<String
 ```
 To build an algo, you need to react to the changing market.  With our solution that's even easier:
 ```kotlin
-    val socket = IO.socket("https://markets.profitview.net?api_key=" + System.getenv("profitview_api_key"))
-    socket.connect().on(Socket.EVENT_CONNECT) { socket.emit("subscribe", arrayOf("trade:bitmex:XBTUSD"))}
-    socket.on("trade") { parameters -> println(parameters[0] as JSONObject) } // replace the println() with an algo
+val socket = IO.socket("https://markets.profitview.net?api_key=" + System.getenv("profitview_api_key"))
+socket.connect().on(Socket.EVENT_CONNECT) { socket.emit("subscribe", arrayOf("trade:bitmex:XBTUSD"))}
+socket.on("trade") { parameters -> println(parameters[0] as JSONObject) } // replace the println() with an algo
 ```
 Essentially, integrating these two sections with some logic (in fact, the algo) is all you need.
 
