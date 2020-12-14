@@ -23,6 +23,145 @@ On all platforms, you will need `git`, a JDK, `gradle` and Kotlin itself.  It's 
 
 See [ProfitView for Dummies](https://profitview.net/blog/profitview-for-dummies) for more detail.
 
+## Install Steps
+
+<table>
+<tr>
+<td> <strong>Step</strong> </td> <td> <strong>Windows</strong> </td> <td> <strong>Linux</strong> </td> <td> <strong>MacOS</strong> </td>
+</tr>
+<tr>
+    <td> <strong>Preparation</strong> </td>
+<td>
+
+There are various security settings that are typically defaulted to in a Windows installation.  You may need to turn some of these off, for example any restriction on downloading files.  It is possible to do this on a domain-by-domain basis, and this is encouraged.
+If you wish to generally allow file downloads, you can do it (on Windows Server 2019) by:
+1. Click the lower left corner "Window" symbol "Start" menu.
+2. Choose "Settings" and search for "Change Security Settings"
+3. Choose the "Security" tab and select the zone "Internet"
+4. Un-check the "Enable Protected Mode"
+5. Choose "Custom" and scroll down to "Downloads"
+6. On "File download" choose "Enable"
+7. Click "Okay" boxes to exit
+
+</td>
+<td colspan=2>
+
+Since both operating systems are derived from Unix, the installations are similar for Linux and MacOS.
+    
+</td>
+</tr>
+<tr>
+<td> <strong>Git</strong> </td>
+<td>
+
+Go to https://git-scm.com/download/win and click the appropriate download button.  Click to run the downloaded install file.
+In the options generally choose the defaults.  Make sure you choose to enable **Git Bash**
+
+</td>
+<td>
+
+Open a terminal window and use your package manager to install `git`. On Debian derivatives including Ubuntu e.g. run 
+```shell
+sudo apt install git
+```
+
+</td>
+<td>
+
+Open Terminal and do
+```shell
+brew install git
+```
+
+</td>
+</tr>
+<td colspan=4>
+For many of the steps below, where it says to open a Terminal window, on Windows, this means the Git Bash window.
+</td>
+<tr>
+<td> <strong>Clone this Repo</strong> </td>
+<td colspan=3>
+
+Open a Terminal window, create a directory in which you wish to place this `kotlinalgotrading` repo, `cd` to it and do:
+```shell
+git clone git@github.com:profitviews/kotlinalgotrading.git
+```
+This will clone this repo into your chosen directory.
+
+</td>
+</tr>
+<tr>
+<td rowspan=2><strong>Java</strong></td>
+<td colspan=3>
+
+Go to [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVariant=hotspot) and install JDK version 8 or greater. 
+    
+</td>
+</tr>
+<tr>
+<td>
+    
+If you choose the [.msi](https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.1%2B9/OpenJDK15U-jdk_x64_windows_hotspot_15.0.1_9.msi), after download you need only to click it to install.  During installation choose to have it set `JDK_HOME` and the Registry variables.
+
+</td>
+<td colspan=2/>
+</tr>
+<tr>
+<td><strong>Kotlin</strong></td>
+<td>
+
+Go to [this](https://kotlinlang.org/docs/tutorials/command-line.html) webpage and under Downloading the compiler click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
+
+Go to "Windows" Start-->Control Panel-->System and Security-->System-->Advanced System Settings and click "Environment Variables".
+Under "System variables" scroll down to "Path", click it and then click "Edit...".  Click "New" and add the full path of the `kotlinc\bin` directory in the unzipped folder.  Click "Okay" repeatedly to exit.  This will set the Kotlin executables as available to be run in other contexts.
+    
+</td>
+<td>
+    
+```shell
+sudo apt install curl # or similar
+curl -s https://get.sdkman.io | bash
+sdk install kotlin
+```
+    
+</td>
+<td>
+
+Use the instructions for Linux, or else
+
+```shell
+brew update
+brew install kotlin
+```
+    
+</tr>
+<tr>
+<td><strong>Gradle</strong></td>
+<td>
+
+In https://gradle.org/install/ go to [Installing manually](https://gradle.org/install/#manually) and follow the instructions for "Microsoft Windows users"
+    
+</td>
+<td>
+
+Assuming `sdk` was installed with Kotlin above
+(otherwise follow those steps first)
+```shell
+sdk install gradle
+```
+    
+</td>
+<td>
+
+```shell
+brew update
+brew install gradle
+```
+    
+</tr>
+</table>
+
+
 ## Windows
 
 There are various security settings that are typically defaulted to in a Windows installation.  You may need to turn some of these off, for example any restriction on downloading files.  It is possible to do this on a domain-by-domain basis, and this is encouraged.
@@ -39,11 +178,9 @@ If you wish to generally allow file downloads, you can do it (on Windows Server 
 Go to https://git-scm.com/download/win and click the appropriate download button.  Click to run the downloaded install file.
 In the options generally choose the defaults.  Make sure you choose to enable **Git Bash**
 
-### Clone this Repo
+Go to the "Windows" Start menu and check that **Git Bash** now appears there.
 
-In Git Bash create a directory in which you wish to place this `kotlinalgotrading` repo, `cd` to it and do:
-```git clone git@github.com:profitviews/kotlinalgotrading.git```
-This will clone this repo into your chosen directory.
+For many of the steps below, where it says to open a Terminal window, on Windows, this means the Git Bash window.
 
 ### Java
 
@@ -52,6 +189,15 @@ Go to [OpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk15&jvmVari
 ### Kotlin
 
 Go to [this](https://kotlinlang.org/docs/tutorials/command-line.html) webpage and under Downloading the compiler click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
+
+Go to "Windows" Start-->Control Panel-->System and Security-->System-->Advanced System Settings and click "Environment Variables".
+Under "System variables" scroll down to "Path", click it and then click "Edit...".  Click "New" and add the full path of the `kotlinc\bin` directory in the unzipped folder.  Click "Okay" repeatedly to exit.  This will set the Kotlin executables as available to be run in other contexts.
+
+### Clone this Repo
+
+In Git Bash create a directory in which you wish to place this `kotlinalgotrading` repo, `cd` to it and do:
+```git clone git@github.com:profitviews/kotlinalgotrading.git```
+This will clone this repo into your chosen directory.
 
 ### Gradle
 
