@@ -166,7 +166,7 @@ brew install gradle
 
 # Initializing Gradle Build
 
-In Terminal (or Git Bash on Windows), `cd` to the directory where you cloned `kotlinalgotrading` and run `./gradlew tasks`.  This will download Gradle (if necessary) and the required libraries.
+Open a Terminal window and `cd` to the directory where you cloned `kotlinalgotrading` and run `./gradlew tasks`.  This will download Gradle (if necessary) and the required libraries.
 
 Then `./gradlew build` will build the system.
 
