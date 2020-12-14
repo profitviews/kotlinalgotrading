@@ -112,8 +112,13 @@ If you choose the [.msi](https://github.com/AdoptOpenJDK/openjdk15-binaries/rele
 
 Go to [this](https://kotlinlang.org/docs/tutorials/command-line.html) webpage and under Downloading the compiler click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
 
-Go to "Windows" Start-->Control Panel-->System and Security-->System-->Advanced System Settings and click "Environment Variables".
-Under "System variables" scroll down to "Path", click it and then click "Edit...".  Click "New" and add the full path of the `kotlinc\bin` directory in the unzipped folder.  Click "Okay" repeatedly to exit.  This will set the Kotlin executables as available to be run in other contexts.
+1. Go to "Windows" Start->Control Panel
+2. System and Security->System->Advanced System Settings
+3. "Environment Variables". Under "System variables" scroll down to "Path"
+4. Click that line and then click "Edit...".  
+5. Click "New" and add the full path of the `kotlinc\bin` directory in the unzipped folder.  
+6. Click "Okay" repeatedly to exit.  
+This will set the Kotlin executables as available to be run in other contexts.
     
 </td>
 <td>
@@ -126,8 +131,6 @@ sdk install kotlin
     
 </td>
 <td>
-
-Use the instructions for Linux, or else
 
 ```shell
 brew update
