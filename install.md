@@ -110,7 +110,7 @@ If you choose the [.msi](https://github.com/AdoptOpenJDK/openjdk15-binaries/rele
 <td><strong>Kotlin</strong></td>
 <td>
 
-Go to [this](https://kotlinlang.org/docs/tutorials/command-line.html) webpage and under Downloading the compiler click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
+Go to [this](https://kotlinlang.org/docs/tutorials/command-line.html) webpage and under "Downloading the compiler" click "GitHub Releases".  Go down to "Assets" and choose the latest `kotlin-compiler-x.y.z.zip` (not the `native` versions) and download.  Unzip to a directory of your choice.
 
 1. Go to "Windows" Start->Control Panel
 2. System and Security->System->Advanced System Settings
