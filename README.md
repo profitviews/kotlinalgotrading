@@ -12,6 +12,10 @@ For help of any type, to discuss ideas or suggest improvements, please join our
 [ProfitViewers Slack](https://join.slack.com/t/profitviewers/shared_invite/zt-k5kxhxb4-vyz~hTlFlrgAtPiQbq~Pcg) and 
 make a comment in the **#kotlin** channel.
 
+The webinar itself: [Algorithmic Trading with Python](https://www.crowdcast.io/e/kotlin_algo_trading).
+
+In the webinar I used this set of [slides](https://docs.google.com/presentation/d/1x5niHnWBhFn39x99F67pWIpjpOglRQjour4-wDBg9JQ/edit?usp=sharing).
+
 ## Overview
 
 The code we present shows that you can put together a functional algo with very little coding infrastructure.
@@ -54,5 +58,3 @@ macros.  That is time during which the market remains active unobserved.  Some t
 to ease the process.  This will also take time and require tuning and maintenance and will have bugs.
 
 [ProfitView](https://profitview.net) provides all this for the trader, and more, in real-time and graphically.
-
-
