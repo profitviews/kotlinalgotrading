@@ -1,4 +1,4 @@
-package webinar2
+package example2
 
 import io.socket.client.IO
 import io.socket.client.Socket

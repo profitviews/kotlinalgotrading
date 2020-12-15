@@ -1,4 +1,4 @@
-package webinar4
+package example4
 
 import market.Signal
 import market.Venue
@@ -21,38 +21,40 @@ class MeanReversion(val reversion: Double, val lookback: Int, val symbol: String
     private val executor = ExecutorFactory.createExecutor(Venue.BITMEX)
     private val ta = Core()
     private var elements = 0
-    private var avg = 0.0
-    private var std = 0.0
+    private var mean = 0.0
     override fun update(source: Source, marketData: Map<String, Any>) {
-        val newPrice = (marketData["price"] as BigDecimal).toDouble()
+        val newPrice = convertPrice(marketData["price"])
         prices.addLast(newPrice)
-        if(elements < lookback) {
-            avg = (elements*avg + newPrice)/++elements
-        } else {
-            avg += (newPrice - prices.removeFirst())/elements
-            std = stdDev(prices)
-            val upperReversion = avg + reversion*std
-            val lowerReversion = avg - reversion*std
-            if(newPrice > upperReversion) {
+        if(elements < lookback) { // Until we have enough data for the mean
+            mean = (elements*mean + newPrice)/++elements
+        } else { // Move and recalculate mean
+            mean += (newPrice - prices.removeFirst())/elements
+            val stdReversion = reversion*stdDev(prices)
+            if(newPrice > mean + stdReversion) { // Upper extreme - Sell!
                 executor.market(symbol, "Sell", qty)
             }
-            if(newPrice < lowerReversion) {
+            if(newPrice < mean - stdReversion) { // Lower extreme - Buy!
                 executor.market(symbol, "Buy", qty)
             }
         }
     }
 
     private fun stdDev(prices: ArrayDeque<Double>): Double {
-        var b = MInteger()
-        var l = MInteger()
-        var std = DoubleArray(1)
+        val b = MInteger()
+        val l = MInteger()
+        val std = DoubleArray(1)
         var retCode = ta.stdDev(0, lookback-1, prices.toDoubleArray(), lookback, 1.0, b, l, std)
         return std[0]
     }
+    private fun convertPrice(price: Any?) = (price as BigDecimal).toDouble()
 }
 
 fun main() {
-    val meanReversion = MeanReversion(4.0, 50, "XBTUSD", 100)
+    val meanReversion = MeanReversion(
+        2.5,
+        50,
+        "XBTUSD",
+        100)
     meanReversion.subscriptions()
     meanReversion.execute()
 }

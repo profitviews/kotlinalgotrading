@@ -182,20 +182,20 @@ Then you can run `./gradlew run` which will buy $10 worth of Bitcoin equivalent 
 To run the other examples, edit [build.gradle.kts](https://github.com/profitviews/kotlinalgotrading/blob/main/build.gradle.kts) in your cloned `kotlinalgotrading` directory, and change 
 ```kotlin
 application {
-    mainClass.set("webinar1.ExecuteExampleKt")
+    mainClass.set("example1.ExecuteExampleKt")
 }
 ```
 to
 ```kotlin
 application {
-    mainClass.set("webinar2.MarketDataExampleKt")
+    mainClass.set("example2.MarketDataExampleKt")
 }
 ```
-or similar with `webinar3.SimpleKt` or `webinar4.MeanReversionKt`.
+or similar with `example3.SimpleKt` or `example4.MeanReversionKt`.
 
 Then execute `./gradlew run` again.
 
-**NOTE**: to run `webinar2.MarketDataExampleKt`, `webinar3.SimpleKt` and `webinar4.MeanReversionKt` - or any algo - you will need your ProfitView API Key from above and write it to the `profitview_api` environment variable with:
+**NOTE**: to run `example2.MarketDataExampleKt`, `example3.SimpleKt` and `example4.MeanReversionKt` - or any algo - you will need your ProfitView API Key from above and write it to the `profitview_api` environment variable with:
 ```shell
 export profitview_api_key=YourProfitViewAPIKey
 ```

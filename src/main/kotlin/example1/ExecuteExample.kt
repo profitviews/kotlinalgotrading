@@ -1,4 +1,4 @@
-package webinar1
+package example1
 
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec

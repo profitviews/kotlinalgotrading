@@ -20,10 +20,10 @@ class BitMEXData : Data {
 
     override fun onTrade(updater: (source: Source, marketData: Map<String, Any>) -> Unit) {
         socket.on(signalMap[Signal.TRADE]) {
-            parameters -> for(parameter in parameters) {
-                val j = parameter as JSONObject
-                updater(Source(Venue.BITMEX, j["sym"].toString(), Signal.TRADE), mapOf(
-                    "side" to j["side"], "size" to j["size"], "price" to j["price"]))
+            parameters -> if(parameters.size == 1) {
+                val j = parameters[0] as JSONObject
+                updater(Source(Venue.BITMEX, j["sym"].toString(), Signal.TRADE),
+                        mapOf("side" to j["side"], "size" to j["size"], "price" to j["price"]))
             }
         }
     }
