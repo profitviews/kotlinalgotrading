@@ -7,6 +7,8 @@ You need an account with [BitMEX](https://www.bitmex.com/).  This is not availab
 Signing up to BitMEX requires authentication.  You will need to enable your microphone and webcam (temporarily) as part of this process - they ask you to repeat some numbers and to obey some simple instructions.  You will need to send a photograph of a government issued id - driver's license or passport e.g.
 This may take a few hours - or perhaps a day if there is some complication.
 
+**Please note** that you must complete this authentication prior to using your BitMEX API key both to trade **and** in ProfitView.  Otherwise your trades will fail with REST errors - and ProfitView will fail - we'll see it in the logs, but it won't be clear to you.
+
 You need some Bitcoin to transfer to your BitMEX wallet.  I buy from [CoinBase](https://www.coinbase.com/), however you may have a preferred vendor.  Once you have bought Bitcoin you transfer it to the BitMEX wallet - click the [Deposit](https://www.bitmex.com/app/wallet) button and copy the wallet id to provide when you send from the vendor.
 
 You need to generate **2** [API key pairs](https://www.bitmex.com/app/apiKeys), one with Key Permissions blank (-) which means **Read Only**, for ProfitView and one with Key Permissions "Order" for your algo so that it can trade.  Copy both these to a safe place (you won't be able to see the API Secret again unless you make a copy).  Make sure you distinguish which is which.
