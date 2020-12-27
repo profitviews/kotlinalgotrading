@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.profitviews"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
