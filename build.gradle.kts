@@ -2,9 +2,10 @@ plugins {
     java
     kotlin("jvm") version "1.4.20"
     application
+    maven
 }
 
-group = "net.profitview"
+group = "com.github.profitviews"
 version = "1.0-SNAPSHOT"
 
 repositories {
