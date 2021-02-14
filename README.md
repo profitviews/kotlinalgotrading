@@ -9,7 +9,7 @@ See [Install](install.md).
 ## Discussion and Help
 
 For help of any type, to discuss ideas or suggest improvements, please join our 
-[ProfitViewers Slack](https://join.slack.com/t/profitviewers/shared_invite/zt-k5kxhxb4-vyz~hTlFlrgAtPiQbq~Pcg) and 
+[ProfitViewers Slack](https://join.slack.com/t/profitviewers/shared_invite/zt-m579s4ef-eYRMT5pKETs7HlSF9avCsA) and 
 make a comment in the **#kotlin** channel.
 
 The webinar itself: [Algorithmic Trading with Python](https://www.crowdcast.io/e/kotlin_algo_trading).
